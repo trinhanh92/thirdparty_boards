@@ -7,7 +7,7 @@ export CC = $(PREFIX)gcc
 export CXX = $(PREFIX)g++
 export AR = @$(PREFIX)ar
 export CFLAGS += -DUSE_STDPERIPH_DRIVER -ggdb -g3 -std=gnu99 -O0 -Wall -Wstrict-prototypes -mcpu=cortex-m3 $(FPU_USAGE) -mlittle-endian -mthumb -mthumb-interwork -nostartfiles
-export CXXFLAGS += -DUSE_STDPERIPH_DRIVER -ggdb -g3 -std=gnu++11 -O0 -Wall -Wstrict-prototypes -mcpu=cortex-m3 $(FPU_USAGE) -mlittle-endian -mthumb -mthumb-interwork -nostartfiles -fno-exceptions -fno-rtti
+export CXXFLAGS += -DUSE_STDPERIPH_DRIVER -ggdb -g3 -std=gnu++11 -O0 -Wall -mcpu=cortex-m3 $(FPU_USAGE) -mlittle-endian -mthumb -mthumb-interwork -nostartfiles -fno-exceptions -fno-rtti
 export ASFLAGS = -ggdb -g3 -mcpu=cortex-m3 $(FPU_USAGE) -mlittle-endian
 export AS = $(PREFIX)as
 export LINK = $(PREFIX)gcc
