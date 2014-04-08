@@ -16,7 +16,7 @@ export OBJCOPY = $(PREFIX)objcopy
 FLASHER = $(RIOTCPU)/$(CPU)/tools/flash.sh
 DEBUGGER = $(RIOTCPU)/$(CPU)/tools/debug.sh
 TERM = miniterm.py -b 115200
-LINKFLAGS =  -DUSE_STDPERIPH_DRIVER -DUSE_STM32_DISCOVERY -g3 -ggdb -mcpu=cortex-m3 $(FPU_USAGE) -mlittle-endian -static -lgcc -mthumb -mthumb-interwork -nostartfiles -T$(RIOTCPU)/$(CPU)/stm32_flash.ld
+LINKFLAGS =  -DUSE_STDPERIPH_DRIVER -DUSE_STM32_DISCOVERY -g3 -ggdb -mcpu=cortex-m3 $(FPU_USAGE) -mlittle-endian -static -lgcc -mthumb -mthumb-interwork -nostartfiles -T$(RIOTCPU)/$(CPU)/stm32_flash.ld  -Wl,--gc-sections
 
 ifeq ($(strip $(PORT)),)
 	export PORT = /dev/ttyUSB2
